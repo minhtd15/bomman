@@ -19,6 +19,9 @@ import static Bomberman.Sounds.SoundEffect.turnOffMusic;
 import static com.almasb.fxgl.dsl.FXGL.*;
 import static javafx.scene.input.KeyCode.*;
 
+/**
+ *  Tong Duc Minh.
+ */
 public class MainMenu extends FXGLMenu {
     public MainMenu() {
         super(MenuType.MAIN_MENU);
@@ -35,11 +38,11 @@ public class MainMenu extends FXGLMenu {
 
         var title = getUIFactoryService().newText(getSettings().getTitle(), Color.rgb(248, 185, 54), 130);
         title.setEffect(dropShadow);
-        centerTextBind(title, getAppWidth() / 2.0, 300);
+        centerText(title);
 
-        var version = getUIFactoryService().newText(getSettings().getVersion(), Color.WHITE, 25);
-        version.setEffect(new DropShadow(3, 3, 3, Color.RED));
-        centerTextBind(version, 860, 250);
+//        var version = getUIFactoryService().newText(getSettings().getVersion(), Color.WHITE, 25);
+//        version.setEffect(new DropShadow(3, 3, 3, Color.RED));
+//        centerTextBind(version, 860, 250);
 
         var menuBox = new VBox(
                 new MenuButton("New Game", 30, () -> newGame()),
@@ -53,7 +56,7 @@ public class MainMenu extends FXGLMenu {
         menuBox.setTranslateY(getAppHeight() / 2.0 + 60);
         menuBox.setSpacing(25);
 
-        getContentRoot().getChildren().addAll(background, title, version, menuBox);
+        getContentRoot().getChildren().addAll(background, title, menuBox);
     }
 
     private void instruct() {

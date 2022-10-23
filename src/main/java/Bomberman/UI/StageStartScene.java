@@ -21,7 +21,7 @@ public class StageStartScene extends SubScene {
         title.setStroke(Color.WHITESMOKE);
         title.setStrokeWidth(1.5);
         title.setEffect(new Bloom(0.6));
-        title.setX(SCENE_WIDTH / 3);
+        title.setX(SCENE_WIDTH / 2.2);
         title.setY(SCENE_HEIGHT / 2);
         getContentRoot().getChildren().addAll(background, title);
 

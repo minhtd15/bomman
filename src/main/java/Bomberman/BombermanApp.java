@@ -42,8 +42,8 @@ public class BombermanApp extends GameApplication {
         gameSettings.setTitle(GAME_TITLE);
         gameSettings.setVersion(GAME_VERSION);
 
-        gameSettings.setFullScreenAllowed(true);
-        gameSettings.setFullScreenFromStart(true);
+        gameSettings.setFullScreenAllowed(false);
+        gameSettings.setFullScreenFromStart(false);
 
         gameSettings.setIntroEnabled(false);
         gameSettings.setGameMenuEnabled(true);

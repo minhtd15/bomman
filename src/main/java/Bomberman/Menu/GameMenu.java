@@ -41,11 +41,11 @@ public class GameMenu extends FXGLMenu {
 
         var title = getUIFactoryService().newText(getSettings().getTitle(), Color.rgb(248, 185, 54), 90);
         title.setEffect(dropShadow);
-        centerTextBind(title, FXGL.getAppWidth() / 2.0, -300);
+        centerText(title);
 
-        var version = getUIFactoryService().newText(getSettings().getVersion(), Color.WHITE, 20);
-        version.setEffect(new DropShadow(3, 3, 3, Color.RED));
-        centerTextBind(version, 800, 280);
+//        var version = getUIFactoryService().newText(getSettings().getVersion(), Color.WHITE, 20);
+//        version.setEffect(new DropShadow(3, 3, 3, Color.RED));
+//        centerTextBind(version, 800, 280);
 
         var menuBox = new VBox(
                 new MenuButton("Resume", 20, () -> fireResume()),
@@ -59,7 +59,7 @@ public class GameMenu extends FXGLMenu {
         menuBox.setTranslateY(getAppHeight() / 2.0 + 50);
         menuBox.setSpacing(20);
 
-        getContentRoot().getChildren().addAll(shape, background, title, version, menuBox);
+        getContentRoot().getChildren().addAll(shape, background, title, menuBox);
     }
 
 }
